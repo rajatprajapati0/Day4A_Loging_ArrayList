@@ -1,1 +1,6 @@
-﻿
+﻿2023-04-17 06:38:05.2358|DEBUG|DemoLog.LogWatch|************Start***********
+2023-04-17 06:38:08.9905|INFO|DemoLog.LogWatch|multiplicaation
+2023-04-17 06:38:08.9905|INFO|DemoLog.LogWatch|user intput 2 and 3 output : 6
+2023-04-17 06:38:08.9905|DEBUG|DemoLog.LogWatch|opretion done
+2023-04-17 06:38:08.9905|DEBUG|DemoLog.LogWatch|************Done***********
+
