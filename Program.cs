@@ -1,64 +1,64 @@
-﻿using DemoLog;
-using System;
+﻿using System;
+using System.Collections;
+using System.Text;
 
-namespace Logging
+namespace Array_List
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            LogWatch logWatch = new LogWatch();
-            logWatch.logDebug("************Start***********");
 
-            Calculator calculator = new Calculator();
-            Console.WriteLine("calculator");
-            Console.WriteLine("Enter option \n'+'>Addition\n'-'Subtraction>\n'*'>multiplicaation\n'/'>division");
-            string B = Console.ReadLine();
-            char option = B[0];
 
-            Console.WriteLine("enter first value");
+
+            Console.WriteLine("size of arry list");
+            //creat 
             int a = int.Parse(Console.ReadLine());
-            Console.WriteLine("enter second value");
-            int b = int.Parse(Console.ReadLine());
+           ArrayList arrayList = new ArrayList(a);
 
 
-            switch (option)
+            for (int i = 0; i < a; i++)
             {
+                Console.WriteLine("enter");
 
-                case '+':
-                    logWatch.logInfo("addition ");
+                var b = Console.ReadLine();
+                arrayList.Add(b);
+            }
 
-                    Console.WriteLine(calculator.add(a, b));
-                    logWatch.logDebug("opretion done");
-                    break;
-                case '-':
-                    logWatch.logInfo("Subtraction");
-
-                    Console.WriteLine(calculator.sub(a, b));
-                    logWatch.logDebug("opretion done");
-
-                    break;
-                case '*':
-                    logWatch.logInfo("multiplicaation");
-
-                    Console.WriteLine(calculator.mult(a, b));
-                    logWatch.logDebug("opretion done");
-
-                    break;
-                case '/':
-                    logWatch.logInfo("division");
-                    Console.WriteLine(calculator.div(a, b));
-                    logWatch.logDebug("opretion done");
-
-                    break;
-                default:
-                    logWatch.logWarn("wrong option");
-                    Console.WriteLine("Enter right option");
-
-                    break;
+            //retrive
+            foreach (var i in arrayList)
+            {
+                Console.WriteLine(i);
 
             }
-            logWatch.logDebug("************Done***********\n");
+
+            Console.WriteLine("enter value wich u want to change ");
+            var find = Console.ReadLine();
+            Console.WriteLine("enter new value u want");
+
+            var update = Console.ReadLine();
+
+            for (int i = 0; i < arrayList.Count; i++)
+            {
+                var iteme = arrayList[i];
+
+                if (find.Contains((string)iteme))
+                {
+                    // arrayList.RemoveAt(i);
+                    arrayList[i] = update;
+                    break;
+
+                }
+
+            }
+            //    arrayList[2] = update;
+
+            foreach (var i in arrayList)
+            {
+                Console.WriteLine(i);
+
+            }
+
 
         }
     }
